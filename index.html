@@ -236,15 +236,18 @@ ul{list-style:none}
 /* ========== INSTAGRAM EMBED ========== */
 .insta-grid{
   display:grid;gap:20px;
-  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  grid-template-columns:repeat(3,1fr);
 }
 .insta-grid__item{
   background:var(--c-gray-100);border:1px solid var(--c-gray-300);
   border-radius:var(--radius);overflow:hidden;
-  min-height:480px;
+  min-width:0;
 }
 .insta-grid__item iframe{
-  width:100%!important;min-height:480px;border:0;
+  width:100%!important;border:0;
+}
+.insta-grid__item blockquote{
+  margin:0!important;min-width:0!important;max-width:100%!important;
 }
 
 /* ========== FAQ ========== */
@@ -383,6 +386,7 @@ ul{list-style:none}
   .services-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr 1fr}
   .testimonials-grid{grid-template-columns:1fr}
+  .insta-grid{grid-template-columns:1fr}
 }
 @media(max-width:380px){
   .process-steps{grid-template-columns:1fr}
@@ -654,17 +658,14 @@ ul{list-style:none}
         2. Copie a URL (ex: https://www.instagram.com/p/ABC123/)
         3. Substitua o TODO abaixo pelo código do post (a parte entre /p/ e /)
       -->
-      <!-- TODO: Substituir SHORTCODE_1 pelo código do post (ex: ABC123def) -->
       <div class="insta-grid__item">
-        <iframe src="https://www.instagram.com/p/DT22RknEUqG/embed" allowtransparency="true" frameborder="0" scrolling="no" loading="lazy" title="Post do Instagram 1"></iframe>
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DT22RknEUqG/" style="width:100%"><a href="https://www.instagram.com/p/DT22RknEUqG/" target="_blank" rel="noopener">Ver post</a></blockquote>
       </div>
-      <!-- TODO: Substituir SHORTCODE_2 pelo código do post -->
       <div class="insta-grid__item">
-        <iframe src="https://www.instagram.com/p/DSBS-YXkbAf/embed" allowtransparency="true" frameborder="0" scrolling="no" loading="lazy" title="Post do Instagram 2"></iframe>
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DSBS-YXkbAf/" style="width:100%"><a href="https://www.instagram.com/p/DSBS-YXkbAf/" target="_blank" rel="noopener">Ver post</a></blockquote>
       </div>
-      <!-- TODO: Substituir SHORTCODE_3 pelo código do post -->
       <div class="insta-grid__item">
-        <iframe src="https://www.instagram.com/p/DUirafekbAW/embed" allowtransparency="true" frameborder="0" scrolling="no" loading="lazy" title="Post do Instagram 3"></iframe>
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DUirafekbAW/" style="width:100%"><a href="https://www.instagram.com/p/DUirafekbAW/" target="_blank" rel="noopener">Ver post</a></blockquote>
       </div>
     </div>
     <div style="text-align:center;margin-top:28px">
@@ -1100,6 +1101,7 @@ ul{list-style:none}
 
 })();
 </script>
+<script async defer src="https://www.instagram.com/embed.js"></script>
 
 </body>
 </html>
