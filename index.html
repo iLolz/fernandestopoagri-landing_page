@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fernandes Topografia e Agrimensura — Medições, Georreferenciamento e Regularização</title>
+<meta name="description" content="Serviços de topografia, agrimensura, georreferenciamento e regularização de imóveis. Levantamentos precisos para obras, loteamentos e documentação fundiária. Solicite um orçamento sem compromisso.">
+<!-- TODO: Atualizar URL canônica com domínio real -->
+<link rel="canonical" href="https://TODO-DOMINIO.com.br/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Fernandes Topografia e Agrimensura — Medições, Georreferenciamento e Regularização">
+<meta property="og:description" content="Levantamentos topográficos, georreferenciamento e regularização de imóveis com precisão técnica. Solicite orçamento sem compromisso.">
+<!-- TODO: Adicionar imagem OG (1200x630) -->
+<meta property="og:image" content="https://TODO-DOMINIO.com.br/og-image.jpg">
+<meta property="og:url" content="https://TODO-DOMINIO.com.br/">
+<meta property="og:site_name" content="Fernandes Topografia e Agrimensura">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Fernandes Topografia e Agrimensura",
+  "description": "Serviços de topografia, agrimensura, georreferenciamento e regularização de imóveis.",
+  "url": "https://TODO-DOMINIO.com.br/",
+  "telephone": "+5531999274089",
+  "email": "TODO@email.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "TODO - Endereço completo",
+    "addressLocality": "TODO - Cidade",
+    "addressRegion": "TODO - UF",
+    "postalCode": "TODO-00000-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "TODO",
+    "longitude": "TODO"
+  },
+  "openingHours": "Mo-Fr 08:00-18:00",
+  "priceRange": "$$",
+  "areaServed": "TODO - Região de atuação",
+  "image": "https://TODO-DOMINIO.com.br/og-image.jpg",
+  "sameAs": ["https://www.instagram.com/fernandestopoagri"]
+}
+</script>
+<style>
+/* ========== RESET & BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
+  color:#1e293b;background:#fff;line-height:1.6;font-size:16px;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+ul{list-style:none}
+:focus-visible{outline:3px solid #2563eb;outline-offset:2px;border-radius:3px}
+
+/* ========== VARIÁVEIS ========== */
+:root{
+  --c-dark:#0f172a;
+  --c-gray-900:#1e293b;
+  --c-gray-700:#334155;
+  --c-gray-500:#64748b;
+  --c-gray-300:#cbd5e1;
+  --c-gray-100:#f1f5f9;
+  --c-white:#ffffff;
+  --c-green:#25d366;
+  --c-green-dark:#1da851;
+  --c-green-light:#dcfce7;
+  --c-blue:#2563eb;
+  --c-blue-dark:#1e40af;
+  --radius:8px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.08);
+  --shadow-md:0 4px 12px rgba(0,0,0,.1);
+  --shadow-lg:0 10px 30px rgba(0,0,0,.12);
+  --max-w:1120px;
+  --transition:0.25s ease;
+}
+
+/* ========== UTILITIES ========== */
+.container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* ========== TOPBAR ========== */
+.topbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--c-gray-300);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  transition:box-shadow var(--transition);
+}
+.topbar.scrolled{box-shadow:var(--shadow-md)}
+.topbar__inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;gap:12px;
+}
+.topbar__brand{
+  font-size:1rem;font-weight:700;color:var(--c-gray-900);
+  white-space:nowrap;display:flex;align-items:center;gap:8px;
+}
+.topbar__brand svg{flex-shrink:0}
+.topbar__actions{display:flex;gap:8px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 20px;border-radius:var(--radius);
+  font-weight:600;font-size:.875rem;
+  cursor:pointer;border:none;
+  transition:background var(--transition),transform .15s ease,box-shadow var(--transition);
+  text-align:center;white-space:nowrap;
+}
+.btn:active{transform:scale(.97)}
+.btn--primary{background:var(--c-green);color:#fff}
+.btn--primary:hover,.btn--primary:focus-visible{background:var(--c-green-dark);box-shadow:0 2px 8px rgba(37,211,102,.35)}
+.btn--secondary{background:transparent;color:var(--c-gray-700);border:1.5px solid var(--c-gray-300)}
+.btn--secondary:hover,.btn--secondary:focus-visible{border-color:var(--c-gray-700);background:var(--c-gray-100)}
+.btn--large{padding:14px 28px;font-size:1rem}
+.btn--icon svg{width:18px;height:18px}
+
+/* ========== HERO ========== */
+.hero{
+  padding:60px 0 40px;
+  background:linear-gradient(170deg,var(--c-gray-100) 0%,#fff 60%);
+}
+.hero__content{max-width:720px}
+.hero__h1{
+  font-size:clamp(1.75rem,4.5vw,2.75rem);
+  line-height:1.15;font-weight:800;color:var(--c-dark);
+  margin-bottom:16px;letter-spacing:-.02em;
+}
+.hero__sub{
+  font-size:clamp(1rem,2vw,1.15rem);
+  color:var(--c-gray-500);margin-bottom:28px;max-width:600px;
+}
+.hero__bullets{
+  display:flex;flex-direction:column;gap:10px;margin-bottom:32px;
+}
+.hero__bullets li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:.95rem;color:var(--c-gray-700);
+}
+.hero__bullets li svg{flex-shrink:0;margin-top:3px;color:var(--c-green)}
+.hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+.trust-strip{
+  display:flex;flex-wrap:wrap;gap:24px;
+  padding:20px 0;border-top:1px solid var(--c-gray-300);
+}
+.trust-strip__item{
+  display:flex;align-items:center;gap:8px;
+  font-size:.85rem;color:var(--c-gray-500);font-weight:500;
+}
+.trust-strip__item svg{color:var(--c-green);flex-shrink:0}
+
+/* ========== SECTION COMMON ========== */
+.section{padding:64px 0}
+.section--alt{background:var(--c-gray-100)}
+.section__header{text-align:center;margin-bottom:48px}
+.section__title{
+  font-size:clamp(1.4rem,3vw,2rem);font-weight:700;
+  color:var(--c-dark);margin-bottom:8px;
+}
+.section__subtitle{
+  font-size:1rem;color:var(--c-gray-500);max-width:560px;margin:0 auto;
+}
+
+/* ========== SERVICES ========== */
+.services-grid{
+  display:grid;gap:20px;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+}
+.service-card{
+  background:#fff;border:1px solid var(--c-gray-300);
+  border-radius:var(--radius);padding:28px 24px;
+  transition:box-shadow var(--transition),transform var(--transition);
+}
+.service-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.service-card__icon{
+  width:44px;height:44px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--c-green-light);color:var(--c-green-dark);
+  margin-bottom:16px;
+}
+.service-card__title{font-size:1.05rem;font-weight:700;margin-bottom:6px;color:var(--c-dark)}
+.service-card__desc{font-size:.9rem;color:var(--c-gray-500);margin-bottom:10px;line-height:1.55}
+.service-card__meta{font-size:.8rem;color:var(--c-gray-500);font-style:italic}
+
+/* ========== PROCESS ========== */
+.process-steps{
+  display:grid;gap:32px;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  counter-reset:step;
+}
+.process-step{text-align:center;position:relative}
+.process-step__num{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--c-dark);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:1.15rem;font-weight:700;margin-bottom:14px;
+}
+.process-step__title{font-weight:700;font-size:.95rem;margin-bottom:4px;color:var(--c-dark)}
+.process-step__desc{font-size:.85rem;color:var(--c-gray-500);max-width:220px;margin:0 auto}
+
+/* ========== SOCIAL PROOF ========== */
+.testimonials-grid{
+  display:grid;gap:20px;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  margin-bottom:48px;
+}
+.testimonial{
+  background:#fff;border:1px solid var(--c-gray-300);
+  border-radius:var(--radius);padding:24px;
+}
+.testimonial__text{
+  font-size:.95rem;color:var(--c-gray-700);line-height:1.6;
+  margin-bottom:16px;font-style:italic;
+}
+.testimonial__author{font-size:.85rem;font-weight:700;color:var(--c-dark)}
+.testimonial__role{font-size:.8rem;color:var(--c-gray-500)}
+.testimonial__stars{color:#f59e0b;margin-bottom:12px;font-size:.9rem;letter-spacing:2px}
+.segments{
+  display:flex;flex-wrap:wrap;gap:16px;justify-content:center;
+}
+.segment-tag{
+  background:#fff;border:1px solid var(--c-gray-300);
+  border-radius:20px;padding:8px 18px;
+  font-size:.85rem;color:var(--c-gray-700);font-weight:500;
+  display:flex;align-items:center;gap:6px;
+}
+.segment-tag svg{width:16px;height:16px;color:var(--c-gray-500)}
+
+/* ========== INSTAGRAM EMBED ========== */
+.insta-grid{
+  display:grid;gap:20px;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+}
+.insta-grid__item{
+  background:var(--c-gray-100);border:1px solid var(--c-gray-300);
+  border-radius:var(--radius);overflow:hidden;
+  min-height:480px;
+}
+.insta-grid__item iframe{
+  width:100%!important;min-height:480px;border:0;
+}
+
+/* ========== FAQ ========== */
+.faq-list{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--c-gray-300)}
+.faq-item:first-child{border-top:1px solid var(--c-gray-300)}
+.faq-btn{
+  width:100%;background:none;border:none;
+  padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font-size:1rem;font-weight:600;color:var(--c-dark);
+  cursor:pointer;text-align:left;
+}
+.faq-btn svg{flex-shrink:0;transition:transform var(--transition);width:20px;height:20px;color:var(--c-gray-500)}
+.faq-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.faq-answer{
+  max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;
+}
+.faq-answer__inner{
+  padding:0 0 18px;font-size:.92rem;color:var(--c-gray-700);line-height:1.65;
+}
+
+/* ========== CTA BANNER ========== */
+.cta-banner{
+  padding:56px 0;text-align:center;
+  background:var(--c-dark);color:#fff;
+}
+.cta-banner__title{
+  font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;margin-bottom:8px;
+}
+.cta-banner__sub{font-size:1rem;color:var(--c-gray-300);margin-bottom:24px}
+
+/* ========== CONTACT ========== */
+.contact-grid{
+  display:grid;gap:40px;
+  grid-template-columns:1fr;
+}
+@media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr}}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;margin-bottom:4px;color:var(--c-gray-700)}
+.form-group label .req{color:#ef4444}
+.form-input,.form-select,.form-textarea{
+  width:100%;padding:10px 14px;border:1.5px solid var(--c-gray-300);border-radius:var(--radius);
+  font-size:.95rem;background:#fff;
+  transition:border-color var(--transition);
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--c-blue);outline:none;box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+.form-textarea{resize:vertical;min-height:80px}
+.form-check{display:flex;align-items:flex-start;gap:8px;margin:12px 0}
+.form-check input[type="checkbox"]{margin-top:4px;accent-color:var(--c-green)}
+.form-check label{font-size:.85rem;color:var(--c-gray-500)}
+.form-note{font-size:.78rem;color:var(--c-gray-500);margin-top:8px;line-height:1.5}
+.form-error{color:#ef4444;font-size:.8rem;margin-top:4px;display:none}
+.form-group.has-error .form-error{display:block}
+.form-group.has-error .form-input,
+.form-group.has-error .form-select{border-color:#ef4444}
+
+.contact-info{display:flex;flex-direction:column;gap:16px}
+.contact-info__item{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:.92rem;color:var(--c-gray-700);
+}
+.contact-info__item svg{flex-shrink:0;color:var(--c-green);margin-top:2px}
+.contact-info__item strong{display:block;color:var(--c-dark);margin-bottom:2px}
+.contact-info__item a{color:var(--c-blue);text-decoration:underline;text-decoration-color:transparent;transition:text-decoration-color var(--transition)}
+.contact-info__item a:hover{text-decoration-color:var(--c-blue)}
+
+/* ========== FOOTER ========== */
+.footer{
+  padding:32px 0;background:var(--c-dark);color:var(--c-gray-300);
+  font-size:.82rem;text-align:center;
+}
+.footer a{color:var(--c-gray-300);text-decoration:underline;text-decoration-color:transparent;transition:text-decoration-color var(--transition)}
+.footer a:hover{text-decoration-color:var(--c-gray-300)}
+.footer__links{display:flex;gap:16px;justify-content:center;margin-bottom:8px;flex-wrap:wrap}
+
+/* ========== FLOATING WPP ========== */
+.fab-wpp{
+  position:fixed;bottom:24px;right:24px;z-index:200;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--c-green);color:#fff;
+  border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(37,211,102,.4);
+  transition:transform var(--transition),box-shadow var(--transition);
+}
+.fab-wpp:hover,.fab-wpp:focus-visible{transform:scale(1.08);box-shadow:0 6px 24px rgba(37,211,102,.5)}
+.fab-wpp svg{width:28px;height:28px}
+
+/* ========== TOAST ========== */
+.toast{
+  position:fixed;bottom:96px;right:24px;z-index:300;
+  background:var(--c-dark);color:#fff;
+  padding:14px 22px;border-radius:var(--radius);
+  font-size:.9rem;font-weight:500;
+  box-shadow:var(--shadow-lg);
+  transform:translateY(20px);opacity:0;
+  transition:transform .3s ease,opacity .3s ease;
+  pointer-events:none;
+}
+.toast.show{transform:translateY(0);opacity:1;pointer-events:auto}
+
+/* ========== MODAL ========== */
+.modal-overlay{
+  position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,.55);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;
+  transition:opacity .3s ease,visibility .3s ease;
+  padding:20px;
+}
+.modal-overlay.open{opacity:1;visibility:visible}
+.modal{
+  background:#fff;border-radius:var(--radius);
+  max-width:600px;width:100%;max-height:80vh;overflow:auto;
+  padding:32px;position:relative;
+}
+.modal__close{
+  position:absolute;top:12px;right:12px;
+  background:none;border:none;cursor:pointer;
+  width:32px;height:32px;display:flex;align-items:center;justify-content:center;
+  color:var(--c-gray-500);border-radius:50%;
+  transition:background var(--transition);
+}
+.modal__close:hover{background:var(--c-gray-100)}
+.modal__title{font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--c-dark)}
+.modal__body{font-size:.9rem;color:var(--c-gray-700);line-height:1.7}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:640px){
+  .topbar__brand span{display:none}
+  .topbar__actions .btn span{display:none}
+  .topbar__actions .btn{padding:10px 12px}
+  .hero{padding:40px 0 32px}
+  .hero__ctas{flex-direction:column}
+  .hero__ctas .btn{width:100%;justify-content:center}
+  .services-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .process-steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== TOPBAR ========== -->
+<header class="topbar" id="topbar" role="banner">
+  <div class="container topbar__inner">
+    <div class="topbar__brand">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polygon points="12 2 2 22 22 22"/>
+        <line x1="12" y1="10" x2="12" y2="16"/>
+        <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      <span>Fernandes Topografia e Agrimensura</span>
+    </div>
+    <nav class="topbar__actions" aria-label="Ações rápidas">
+      <a href="https://wa.me/5531999274089?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20topografia." class="btn btn--primary btn--icon" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Falar no WhatsApp</span>
+      </a>
+      <a href="#contato" class="btn btn--secondary">
+        <span>Solicitar orçamento</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero__content">
+      <h1 class="hero__h1">Medições e documentação com precisão para sua obra e regularização</h1>
+      <p class="hero__sub">
+        Atendemos construtoras, escritórios de arquitetura, proprietários rurais e urbanos
+        com levantamentos topográficos, georreferenciamento e apoio documental.
+      </p>
+      <ul class="hero__bullets" role="list">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Evite retrabalho com dados precisos desde o início do projeto
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Segurança na execução da obra com locação e acompanhamento técnico
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Documentação organizada: plantas, memoriais e arquivos digitais prontos para uso
+        </li>
+      </ul>
+      <div class="hero__ctas">
+        <a href="https://wa.me/5531999274089?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20topografia." class="btn btn--primary btn--large btn--icon" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="#contato" class="btn btn--secondary btn--large">Solicitar orçamento</a>
+      </div>
+    </div>
+    <div class="trust-strip" role="list" aria-label="Diferenciais">
+      <div class="trust-strip__item" role="listitem">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 1l2.39 4.843 5.346.778-3.868 3.77.913 5.325L10 13.347l-4.781 2.37.913-5.326L2.264 6.62l5.347-.778L10 1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Atendimento técnico especializado
+      </div>
+      <div class="trust-strip__item" role="listitem">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Entregas organizadas e no formato correto
+      </div>
+      <div class="trust-strip__item" role="listitem">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15z" stroke="currentColor" stroke-width="1.5"/><path d="M10 5v5l3.333 1.667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Suporte pós-entrega
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVIÇOS ========== -->
+<section class="section" id="servicos" aria-labelledby="servicos-titulo">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" id="servicos-titulo">Serviços</h2>
+      <p class="section__subtitle">Soluções técnicas para cada etapa do seu projeto — da medição à documentação final.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+        </div>
+        <h3 class="service-card__title">Levantamento Planialtimétrico e Cadastral</h3>
+        <p class="service-card__desc">Mapeamos o terreno com precisão milimétrica — relevo, divisas, construções e infraestrutura existente. Você recebe a base confiável para projetos de engenharia, arquitetura ou regularização.</p>
+        <p class="service-card__meta">Para: construtoras, arquitetos, proprietários · Entrega: planta + memorial descritivo</p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3 class="service-card__title">Locação e Acompanhamento de Obra</h3>
+        <p class="service-card__desc">Marcação dos pontos de referência no terreno para que fundações, muros e estruturas sigam exatamente o projeto aprovado. Acompanhamento técnico durante a execução para evitar desvios.</p>
+        <p class="service-card__meta">Para: construtoras, engenheiros civis · Entrega: relatório de locação + acompanhamento</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3 class="service-card__title">Georreferenciamento de Imóveis</h3>
+        <p class="service-card__desc">Vincule as coordenadas do seu imóvel ao sistema geodésico oficial — etapa obrigatória para certificação no INCRA (rurais) e exigida em diversas situações para imóveis urbanos.</p>
+        <p class="service-card__meta">Para: proprietários rurais e urbanos · Entrega: planta georreferenciada + ART</p>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 class="service-card__title">Regularização, REURB e Usucapião</h3>
+        <p class="service-card__desc">Apoio técnico e documental para regularizar a situação do imóvel junto a cartório e prefeitura — plantas, memoriais e peças técnicas necessárias ao processo.</p>
+        <p class="service-card__meta">Para: proprietários, advogados, prefeituras · Entrega: peças técnicas exigidas pelo processo</p>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><polyline points="16 3 12 7 8 3"/></svg>
+        </div>
+        <h3 class="service-card__title">Loteamentos e Projetos</h3>
+        <p class="service-card__desc">Levantamento, projeto e documentação para parcelamento do solo — desde o estudo de viabilidade até a aprovação nos órgãos competentes.</p>
+        <p class="service-card__meta">Para: loteadoras, incorporadoras · Entrega: projeto de loteamento + documentação</p>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3 class="service-card__title">Aerolevantamento com Drone</h3>
+        <p class="service-card__desc">Mapeamento aéreo com drones para geração de ortomosaicos, modelos 3D e curvas de nível. Ideal para áreas extensas ou de difícil acesso.</p>
+        <p class="service-card__meta">Para: fazendas, minerações, grandes terrenos · Entrega: ortofotos + modelo digital</p>
+      </article>
+    </div>
+
+    <div style="text-align:center;margin-top:36px">
+      <a href="https://wa.me/5531999274089?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20topografia." class="btn btn--primary btn--large btn--icon" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Tire suas dúvidas no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMO FUNCIONA ========== -->
+<section class="section section--alt" id="como-funciona" aria-labelledby="processo-titulo">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" id="processo-titulo">Como funciona</h2>
+      <p class="section__subtitle">Do primeiro contato à entrega final, tudo de forma clara e sem surpresas.</p>
+    </div>
+    <div class="process-steps" role="list">
+      <div class="process-step" role="listitem">
+        <div class="process-step__num" aria-hidden="true">1</div>
+        <h3 class="process-step__title">Entendimento do objetivo</h3>
+        <p class="process-step__desc">Conversamos sobre sua necessidade, prazos e tipo de serviço — sem compromisso.</p>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="process-step__num" aria-hidden="true">2</div>
+        <h3 class="process-step__title">Visita técnica e coleta</h3>
+        <p class="process-step__desc">Vamos até o local com equipamentos adequados para coletar os dados de campo.</p>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="process-step__num" aria-hidden="true">3</div>
+        <h3 class="process-step__title">Processamento e conferência</h3>
+        <p class="process-step__desc">Os dados são processados em escritório e passam por conferência de qualidade.</p>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="process-step__num" aria-hidden="true">4</div>
+        <h3 class="process-step__title">Entrega dos resultados</h3>
+        <p class="process-step__desc">Você recebe plantas, memoriais descritivos e arquivos digitais no formato solicitado.</p>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="process-step__num" aria-hidden="true">5</div>
+        <h3 class="process-step__title">Ajustes e suporte</h3>
+        <p class="process-step__desc">Precisa de alguma correção ou tem dúvidas? Estamos disponíveis após a entrega.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROVA SOCIAL ========== -->
+<section class="section" id="depoimentos" aria-labelledby="depoimentos-titulo">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" id="depoimentos-titulo">Quem já contratou aprovou</h2>
+      <p class="section__subtitle">Veja o que dizem profissionais e proprietários que trabalharam conosco.</p>
+    </div>
+    <div class="testimonials-grid">
+
+      <!-- TODO: Substituir depoimentos por depoimentos reais -->
+      <article class="testimonial">
+        <div class="testimonial__stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="testimonial__text">"O levantamento foi entregue no prazo combinado e a planta veio completa, sem necessidade de ajustes. Recomendo para quem precisa de dados confiáveis para projeto."</p>
+        <p class="testimonial__author">TODO — Nome do cliente</p>
+        <p class="testimonial__role">TODO — Tipo de projeto · TODO — Cidade/UF</p>
+      </article>
+
+      <article class="testimonial">
+        <div class="testimonial__stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="testimonial__text">"Precisávamos do georreferenciamento para certificação no INCRA e o processo foi conduzido com muita clareza. Todas as dúvidas foram respondidas rapidamente."</p>
+        <p class="testimonial__author">TODO — Nome do cliente</p>
+        <p class="testimonial__role">TODO — Tipo de projeto · TODO — Cidade/UF</p>
+      </article>
+
+      <article class="testimonial">
+        <div class="testimonial__stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="testimonial__text">"Contratamos a locação de obra e o acompanhamento durante a execução. O serviço trouxe segurança para nossa equipe e evitou erros na fundação."</p>
+        <p class="testimonial__author">TODO — Nome do cliente</p>
+        <p class="testimonial__role">TODO — Tipo de projeto · TODO — Cidade/UF</p>
+      </article>
+    </div>
+
+    <div class="section__header" style="margin-bottom:24px">
+      <h3 class="section__title" style="font-size:1.1rem">Segmentos atendidos</h3>
+    </div>
+    <div class="segments" role="list">
+      <div class="segment-tag" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        Construtoras
+      </div>
+      <div class="segment-tag" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        Arquitetura e Engenharia
+      </div>
+      <div class="segment-tag" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Imóveis Rurais
+      </div>
+      <div class="segment-tag" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        Indústria
+      </div>
+      <div class="segment-tag" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Prefeituras e Órgãos Públicos
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INSTAGRAM ========== -->
+<section class="section section--alt" id="instagram" aria-labelledby="insta-titulo">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" id="insta-titulo">Acompanhe nosso trabalho</h2>
+      <p class="section__subtitle">Veja projetos recentes no nosso Instagram.
+        <a href="https://www.instagram.com/fernandestopoagri" target="_blank" rel="noopener" style="color:var(--c-blue);text-decoration:underline">@fernandestopoagri</a>
+      </p>
+    </div>
+    <div class="insta-grid">
+      <!--
+        COMO ATUALIZAR OS POSTS:
+        1. Abra o post no Instagram (navegador)
+        2. Copie a URL (ex: https://www.instagram.com/p/ABC123/)
+        3. Substitua o TODO abaixo pelo código do post (a parte entre /p/ e /)
+      -->
+      <!-- TODO: Substituir SHORTCODE_1 pelo código do post (ex: ABC123def) -->
+      <div class="insta-grid__item">
+        <iframe src="https://www.instagram.com/p/DT22RknEUqG/embed" allowtransparency="true" frameborder="0" scrolling="no" loading="lazy" title="Post do Instagram 1"></iframe>
+      </div>
+      <!-- TODO: Substituir SHORTCODE_2 pelo código do post -->
+      <div class="insta-grid__item">
+        <iframe src="https://www.instagram.com/p/DSBS-YXkbAf/embed" allowtransparency="true" frameborder="0" scrolling="no" loading="lazy" title="Post do Instagram 2"></iframe>
+      </div>
+      <!-- TODO: Substituir SHORTCODE_3 pelo código do post -->
+      <div class="insta-grid__item">
+        <iframe src="https://www.instagram.com/p/DUirafekbAW/embed" allowtransparency="true" frameborder="0" scrolling="no" loading="lazy" title="Post do Instagram 3"></iframe>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="https://www.instagram.com/fernandestopoagri" class="btn btn--secondary btn--large" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Ver mais no Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section section--alt" id="faq" aria-labelledby="faq-titulo">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" id="faq-titulo">Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
+          Quanto tempo leva para concluir um serviço?
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-btn-1">
+          <div class="faq-answer__inner">
+            Depende do tipo de serviço e da área envolvida. Levantamentos simples em lotes urbanos costumam ser concluídos em poucos dias. Já georreferenciamentos de áreas rurais maiores ou projetos de loteamento podem levar semanas. No primeiro contato, informamos uma estimativa de prazo para o seu caso específico.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
+          Que informações preciso enviar para solicitar um orçamento?
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-btn-2">
+          <div class="faq-answer__inner">
+            Basicamente: o que você precisa (tipo de serviço), onde fica o imóvel (cidade/estado e, se possível, endereço ou coordenadas) e qual a finalidade (obra, regularização, venda etc.). Quanto mais detalhes, mais precisa será nossa proposta. Mas não se preocupe — se não tiver tudo em mãos, podemos conversar e alinhar as informações juntos.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
+          Vocês atendem quais cidades ou regiões?
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-btn-3">
+          <div class="faq-answer__inner">
+            <!-- TODO: Substituir pela região real de atendimento -->
+            Atendemos a cidade de <strong>TODO — Cidade/UF</strong> e toda a região de <strong>TODO — região de atuação</strong>. Para localidades mais distantes, entre em contato para verificarmos a viabilidade.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
+          Quais entregáveis eu recebo ao final?
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-4" role="region" aria-labelledby="faq-btn-4">
+          <div class="faq-answer__inner">
+            Depende do serviço contratado, mas geralmente incluem: planta topográfica (PDF e DWG/DXF), memorial descritivo, ART (Anotação de Responsabilidade Técnica) e, quando aplicável, arquivos georreferenciados. Tudo em formato digital, organizado e pronto para uso em projetos ou processos.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">
+          Vocês dão suporte após a entrega?
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-5" role="region" aria-labelledby="faq-btn-5">
+          <div class="faq-answer__inner">
+            Sim. Se surgir alguma dúvida sobre os arquivos, se precisar de ajuste pontual ou de uma versão adicional do material, estamos disponíveis para atender. Nosso compromisso não termina na entrega.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BANNER ========== -->
+<section class="cta-banner" aria-label="Chamada para ação">
+  <div class="container">
+    <h2 class="cta-banner__title">Precisa de um levantamento topográfico?</h2>
+    <p class="cta-banner__sub">Solicite um orçamento sem compromisso. Retorno rápido pelo WhatsApp.</p>
+    <a href="https://wa.me/5531999274089?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20topografia." class="btn btn--primary btn--large btn--icon" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar no WhatsApp agora
+    </a>
+  </div>
+</section>
+
+<!-- ========== CONTATO / ORÇAMENTO ========== -->
+<section class="section" id="contato" aria-labelledby="contato-titulo">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" id="contato-titulo">Solicite seu orçamento</h2>
+      <p class="section__subtitle">Preencha o formulário abaixo. Ao enviar, uma mensagem será preparada no WhatsApp para você finalizar o contato.</p>
+    </div>
+    <div class="contact-grid">
+      <form id="form-orcamento" novalidate aria-label="Formulário de solicitação de orçamento">
+        <div class="form-group" id="fg-nome">
+          <label for="nome">Nome <span class="req" aria-label="obrigatório">*</span></label>
+          <input type="text" id="nome" name="nome" class="form-input" required autocomplete="name" placeholder="Seu nome completo">
+          <div class="form-error" id="erro-nome">Informe seu nome.</div>
+        </div>
+
+        <div class="form-group" id="fg-telefone">
+          <label for="telefone">WhatsApp / Telefone <span class="req" aria-label="obrigatório">*</span></label>
+          <input type="tel" id="telefone" name="telefone" class="form-input" required autocomplete="tel" placeholder="(00) 00000-0000">
+          <div class="form-error" id="erro-telefone">Informe seu WhatsApp ou telefone.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="cidade">Cidade / UF</label>
+          <input type="text" id="cidade" name="cidade" class="form-input" autocomplete="address-level2" placeholder="Ex: Uberlândia/MG">
+        </div>
+
+        <div class="form-group" id="fg-servico">
+          <label for="servico">Tipo de serviço</label>
+          <select id="servico" name="servico" class="form-select">
+            <option value="">Selecione (opcional)</option>
+            <option value="Levantamento planialtimétrico/cadastral">Levantamento planialtimétrico / cadastral</option>
+            <option value="Locação e acompanhamento de obra">Locação e acompanhamento de obra</option>
+            <option value="Georreferenciamento">Georreferenciamento de imóvel</option>
+            <option value="Regularização / REURB / Usucapião">Regularização / REURB / Usucapião</option>
+            <option value="Loteamento / Projeto">Loteamento / Projeto</option>
+            <option value="Aerolevantamento / Drone">Aerolevantamento / Drone</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem <span style="font-weight:400;color:var(--c-gray-500)">(opcional)</span></label>
+          <textarea id="mensagem" name="mensagem" class="form-textarea" rows="3" placeholder="Descreva brevemente sua necessidade, localização do imóvel ou dúvida."></textarea>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="prefere-wpp" name="prefere-wpp" checked>
+          <label for="prefere-wpp">Prefiro contato por WhatsApp</label>
+        </div>
+
+        <!-- TODO: Atualizar texto com link real da Política de Privacidade -->
+        <p class="form-note">
+          Ao enviar, você concorda com nossa
+          <a href="#" id="link-privacidade" style="color:var(--c-blue);text-decoration:underline">Política de Privacidade</a>.
+          Seus dados serão usados apenas para responder sua solicitação, conforme a LGPD.
+        </p>
+
+        <button type="submit" class="btn btn--primary btn--large" style="margin-top:16px;width:100%">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Enviar e abrir no WhatsApp
+        </button>
+        <p class="form-note" style="text-align:center;margin-top:8px">
+          Ao clicar, o WhatsApp será aberto com uma mensagem pré-preenchida com os dados do formulário. Você revisa antes de enviar.
+        </p>
+      </form>
+
+      <aside class="contact-info" aria-label="Informações de contato">
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--c-dark);margin-bottom:4px">Contato direto</h3>
+        <div class="contact-info__item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:var(--c-green)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/5531999274089" target="_blank" rel="noopener">(31) 99927-4089</a>
+          </div>
+        </div>
+        <div class="contact-info__item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <div>
+            <strong>Telefone</strong>
+            <a href="tel:+5531999274089">(31) 99927-4089</a>
+          </div>
+        </div>
+        <div class="contact-info__item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <strong>E-mail</strong>
+            <!-- TODO: Substituir e-mail -->
+            <a href="mailto:TODO@email.com">TODO@email.com</a>
+          </div>
+        </div>
+        <div class="contact-info__item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <strong>Horário de atendimento</strong>
+            <!-- TODO: Ajustar horário real -->
+            Segunda a sexta, das 8h às 18h
+          </div>
+        </div>
+        <div class="contact-info__item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>Área de atuação</strong>
+            <!-- TODO: Substituir pela região de atuação -->
+            TODO — Cidade/UF e região
+          </div>
+        </div>
+
+        <div class="contact-info__item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <div>
+            <strong>Instagram</strong>
+            <a href="https://www.instagram.com/fernandestopoagri" target="_blank" rel="noopener">@fernandestopoagri</a>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;padding:16px;background:var(--c-green-light);border-radius:var(--radius)">
+          <p style="font-size:.9rem;color:var(--c-gray-700);margin:0">
+            <strong style="color:var(--c-dark)">Orçamento sem compromisso.</strong><br>
+            Envie sua solicitação e receba uma proposta técnica com prazo e valores. Sem surpresas.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__links">
+      <a href="https://www.instagram.com/fernandestopoagri" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      <a href="#" id="link-privacidade-footer">Política de Privacidade</a>
+      <!-- TODO: Substituir endereço -->
+      <span>TODO — Endereço completo, Cidade/UF</span>
+    </div>
+    <!-- TODO: Substituir CNPJ -->
+    <p>CNPJ: TODO — 00.000.000/0000-00</p>
+    <p style="margin-top:4px">&copy; <span id="footer-year"></span> Fernandes Topografia e Agrimensura. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ========== FAB WhatsApp ========== -->
+<a href="https://wa.me/5531999274089?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20topografia." class="fab-wpp" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ========== TOAST ========== -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- ========== MODAL POLÍTICA DE PRIVACIDADE ========== -->
+<div class="modal-overlay" id="modal-privacidade" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-priv-titulo">
+  <div class="modal">
+    <button class="modal__close" id="modal-fechar" aria-label="Fechar">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+    </button>
+    <h2 class="modal__title" id="modal-priv-titulo">Política de Privacidade</h2>
+    <div class="modal__body">
+      <!-- TODO: Substituir pelo texto real da Política de Privacidade -->
+      <p><strong>Fernandes Topografia e Agrimensura</strong> ("nós") respeita a privacidade dos seus dados pessoais.</p>
+      <p style="margin-top:12px"><strong>Dados coletados:</strong> Nome, telefone/WhatsApp, cidade/UF, tipo de serviço e mensagem enviada pelo formulário de contato do site.</p>
+      <p style="margin-top:12px"><strong>Finalidade:</strong> Os dados são utilizados exclusivamente para responder sua solicitação de orçamento ou atendimento e não são compartilhados com terceiros para fins comerciais.</p>
+      <p style="margin-top:12px"><strong>Armazenamento:</strong> Os dados são tratados conforme a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+      <p style="margin-top:12px"><strong>Seus direitos:</strong> Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento, entrando em contato pelo e-mail ou WhatsApp informados neste site.</p>
+      <p style="margin-top:12px"><strong>Contato:</strong> TODO — E-mail de contato para questões de privacidade.</p>
+      <p style="margin-top:16px;font-size:.82rem;color:var(--c-gray-500)">Última atualização: TODO — Data.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* === Ano no footer === */
+  var yearEl = document.getElementById('footer-year');
+  if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* === Topbar scroll === */
+  var topbar = document.getElementById('topbar');
+  var scrolled = false;
+  function checkScroll(){
+    var s = window.scrollY > 10;
+    if(s !== scrolled){
+      scrolled = s;
+      topbar.classList.toggle('scrolled', s);
+    }
+  }
+  window.addEventListener('scroll', checkScroll, {passive:true});
+  checkScroll();
+
+  /* === FAQ accordion === */
+  var faqBtns = document.querySelectorAll('.faq-btn');
+  faqBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      // Fecha todos
+      faqBtns.forEach(function(b){
+        b.setAttribute('aria-expanded','false');
+        var a = document.getElementById(b.getAttribute('aria-controls'));
+        if(a) a.style.maxHeight = '0';
+      });
+      // Abre o clicado (se estava fechado)
+      if(!expanded){
+        btn.setAttribute('aria-expanded','true');
+        var answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if(answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* === Formulário === */
+  var WPP_NUMERO = '5531999274089';
+
+  var form = document.getElementById('form-orcamento');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var valid = true;
+
+    // Nome
+    var nome = document.getElementById('nome');
+    var fgNome = document.getElementById('fg-nome');
+    if(!nome.value.trim()){
+      fgNome.classList.add('has-error');
+      valid = false;
+    } else {
+      fgNome.classList.remove('has-error');
+    }
+
+    // Telefone
+    var tel = document.getElementById('telefone');
+    var fgTel = document.getElementById('fg-telefone');
+    if(!tel.value.trim() || tel.value.replace(/\D/g,'').length < 10){
+      fgTel.classList.add('has-error');
+      valid = false;
+    } else {
+      fgTel.classList.remove('has-error');
+    }
+
+    if(!valid){
+      // Foca no primeiro campo com erro
+      var firstErr = form.querySelector('.has-error input, .has-error select');
+      if(firstErr) firstErr.focus();
+      return;
+    }
+
+    // Montar mensagem
+    var cidade = document.getElementById('cidade').value.trim();
+    var servico = document.getElementById('servico').value;
+    var msg = document.getElementById('mensagem').value.trim();
+    var prefereWpp = document.getElementById('prefere-wpp').checked;
+
+    var texto = 'Olá! Gostaria de solicitar um orçamento.\n\n';
+    texto += '• Nome: ' + nome.value.trim() + '\n';
+    texto += '• Telefone: ' + tel.value.trim() + '\n';
+    if(cidade) texto += '• Cidade/UF: ' + cidade + '\n';
+    if(servico) texto += '• Serviço: ' + servico + '\n';
+    if(prefereWpp) texto += '• Prefere contato por WhatsApp\n';
+    if(msg) texto += '\nMensagem: ' + msg + '\n';
+
+    var url = 'https://wa.me/' + WPP_NUMERO + '?text=' + encodeURIComponent(texto);
+    window.open(url, '_blank', 'noopener');
+
+    showToast('Mensagem pronta no WhatsApp — revise e envie.');
+  });
+
+  // Limpar erro ao digitar
+  ['nome','telefone'].forEach(function(id){
+    var el = document.getElementById(id);
+    el.addEventListener('input', function(){
+      var fg = document.getElementById('fg-' + id);
+      if(fg) fg.classList.remove('has-error');
+    });
+  });
+
+  /* === Toast === */
+  var toastEl = document.getElementById('toast');
+  var toastTimer;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('show');
+    }, 5000);
+  }
+
+  /* === Modal Política de Privacidade === */
+  var modal = document.getElementById('modal-privacidade');
+  var modalFechar = document.getElementById('modal-fechar');
+  var triggers = [document.getElementById('link-privacidade'), document.getElementById('link-privacidade-footer')];
+  var lastFocused;
+
+  function abrirModal(e){
+    e.preventDefault();
+    lastFocused = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    modalFechar.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function fecharModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    if(lastFocused) lastFocused.focus();
+  }
+
+  triggers.forEach(function(t){
+    if(t) t.addEventListener('click', abrirModal);
+  });
+
+  modalFechar.addEventListener('click', fecharModal);
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) fecharModal();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('open')){
+      fecharModal();
+    }
+  });
+
+  /* === Máscara simples telefone === */
+  var telInput = document.getElementById('telefone');
+  telInput.addEventListener('input', function(){
+    var v = telInput.value.replace(/\D/g,'');
+    if(v.length > 11) v = v.slice(0,11);
+    if(v.length > 6){
+      telInput.value = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+    } else if(v.length > 2){
+      telInput.value = '(' + v.slice(0,2) + ') ' + v.slice(2);
+    } else if(v.length > 0){
+      telInput.value = '(' + v;
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>
