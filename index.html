@@ -246,8 +246,24 @@ ul{list-style:none}
 .insta-grid__item iframe{
   width:100%!important;border:0;
 }
-.insta-grid__item blockquote{
+.insta-grid__item blockquote.instagram-media{
   margin:0!important;min-width:0!important;max-width:100%!important;
+  background:#fff!important;border:0!important;
+  border-radius:var(--radius)!important;
+  padding:0!important;
+  min-height:380px;
+  display:flex;align-items:center;justify-content:center;
+}
+.insta-grid__item blockquote.instagram-media a{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 24px;border-radius:var(--radius);
+  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  color:#fff;font-weight:600;font-size:.9rem;
+  text-decoration:none;
+  transition:opacity var(--transition),transform .15s ease;
+}
+.insta-grid__item blockquote.instagram-media a:hover{
+  opacity:.9;transform:scale(1.03);
 }
 
 /* ========== FAQ ========== */
@@ -659,13 +675,13 @@ ul{list-style:none}
         3. Substitua o TODO abaixo pelo código do post (a parte entre /p/ e /)
       -->
       <div class="insta-grid__item">
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DT22RknEUqG/" style="width:100%"><a href="https://www.instagram.com/p/DT22RknEUqG/" target="_blank" rel="noopener">Ver post</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DT22RknEUqG/" style="width:100%"><a href="https://www.instagram.com/p/DT22RknEUqG/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline;vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Ver no Instagram</a></blockquote>
       </div>
       <div class="insta-grid__item">
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DSBS-YXkbAf/" style="width:100%"><a href="https://www.instagram.com/p/DSBS-YXkbAf/" target="_blank" rel="noopener">Ver post</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DSBS-YXkbAf/" style="width:100%"><a href="https://www.instagram.com/p/DSBS-YXkbAf/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline;vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Ver no Instagram</a></blockquote>
       </div>
       <div class="insta-grid__item">
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DUirafekbAW/" style="width:100%"><a href="https://www.instagram.com/p/DUirafekbAW/" target="_blank" rel="noopener">Ver post</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUirafekbAW/" style="width:100%"><a href="https://www.instagram.com/p/DUirafekbAW/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline;vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Ver no Instagram</a></blockquote>
       </div>
     </div>
     <div style="text-align:center;margin-top:28px">
