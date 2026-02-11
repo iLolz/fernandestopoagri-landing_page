@@ -52,11 +52,12 @@
 <style>
 /* ========== RESET & BASE ========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
   color:#1e293b;background:#fff;line-height:1.6;font-size:16px;
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
 }
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -160,7 +161,7 @@ ul{list-style:none}
 .trust-strip__item svg{color:var(--c-green);flex-shrink:0}
 
 /* ========== SECTION COMMON ========== */
-.section{padding:64px 0}
+.section{padding:64px 0;overflow:hidden}
 .section--alt{background:var(--c-gray-100)}
 .section__header{text-align:center;margin-bottom:48px}
 .section__title{
@@ -236,38 +237,36 @@ ul{list-style:none}
 }
 .segment-tag svg{width:16px;height:16px;color:var(--c-gray-500)}
 
-/* ========== INSTAGRAM EMBED ========== */
+/* ========== INSTAGRAM CARDS ========== */
 .insta-grid{
   display:grid;gap:20px;
   grid-template-columns:repeat(3,1fr);
 }
-.insta-grid__item{
-  background:var(--c-gray-100);border:1px solid var(--c-gray-300);
+.insta-card{
+  background:#fff;border:1px solid var(--c-gray-300);
   border-radius:var(--radius);overflow:hidden;
-  min-width:0;
+  text-decoration:none;color:inherit;
+  transition:box-shadow var(--transition),transform var(--transition);
+  display:flex;flex-direction:column;
 }
-.insta-grid__item iframe{
-  width:100%!important;border:0;
+.insta-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.insta-card__thumb{
+  width:100%;aspect-ratio:1;object-fit:cover;
+  background:var(--c-gray-100);
+  display:block;
 }
-.insta-grid__item blockquote.instagram-media{
-  margin:0!important;min-width:0!important;max-width:100%!important;
-  background:#fff!important;border:0!important;
-  border-radius:var(--radius)!important;
-  padding:0!important;
-  min-height:380px;
+.insta-card__body{
+  padding:16px;display:flex;align-items:center;gap:10px;
+}
+.insta-card__icon{
+  width:36px;height:36px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
   display:flex;align-items:center;justify-content:center;
 }
-.insta-grid__item blockquote.instagram-media a{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:14px 24px;border-radius:var(--radius);
-  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-  color:#fff;font-weight:600;font-size:.9rem;
-  text-decoration:none;
-  transition:opacity var(--transition),transform .15s ease;
-}
-.insta-grid__item blockquote.instagram-media a:hover{
-  opacity:.9;transform:scale(1.03);
-}
+.insta-card__icon svg{width:18px;height:18px;color:#fff}
+.insta-card__info{min-width:0}
+.insta-card__handle{font-size:.85rem;font-weight:600;color:var(--c-dark)}
+.insta-card__label{font-size:.78rem;color:var(--c-gray-500)}
 
 /* ========== FAQ ========== */
 .faq-list{max-width:720px;margin:0 auto}
@@ -292,6 +291,7 @@ ul{list-style:none}
 .cta-banner{
   padding:56px 0;text-align:center;
   background:var(--c-dark);color:#fff;
+  overflow:hidden;
 }
 .cta-banner__title{
   font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;margin-bottom:8px;
@@ -336,7 +336,7 @@ ul{list-style:none}
 /* ========== FOOTER ========== */
 .footer{
   padding:32px 0;background:var(--c-dark);color:var(--c-gray-300);
-  font-size:.82rem;text-align:center;
+  font-size:.82rem;text-align:center;overflow:hidden;
 }
 .footer a{color:var(--c-gray-300);text-decoration:underline;text-decoration-color:transparent;transition:text-decoration-color var(--transition)}
 .footer a:hover{text-decoration-color:var(--c-gray-300)}
@@ -406,8 +406,7 @@ ul{list-style:none}
   .services-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr 1fr}
   .testimonials-grid{grid-template-columns:1fr}
-  .insta-grid{grid-template-columns:1fr}
-}
+  .insta-grid{grid-template-columns:1fr}}
 @media(max-width:380px){
   .process-steps{grid-template-columns:1fr}
 }
@@ -670,19 +669,30 @@ ul{list-style:none}
     <div class="insta-grid">
       <!--
         COMO ATUALIZAR OS POSTS:
-        1. Abra o post no Instagram (navegador)
-        2. Copie a URL (ex: https://www.instagram.com/p/ABC123/)
-        3. Substitua o TODO abaixo pelo código do post (a parte entre /p/ e /)
+        1. Salve um print/thumbnail do post como assets/insta-1.jpg, insta-2.jpg, insta-3.jpg
+        2. Atualize o href com a URL do post
       -->
-      <div class="insta-grid__item">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DT22RknEUqG/" style="width:100%"><a href="https://www.instagram.com/p/DT22RknEUqG/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline;vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Ver no Instagram</a></blockquote>
-      </div>
-      <div class="insta-grid__item">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DSBS-YXkbAf/" style="width:100%"><a href="https://www.instagram.com/p/DSBS-YXkbAf/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline;vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Ver no Instagram</a></blockquote>
-      </div>
-      <div class="insta-grid__item">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUirafekbAW/" style="width:100%"><a href="https://www.instagram.com/p/DUirafekbAW/" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline;vertical-align:middle"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Ver no Instagram</a></blockquote>
-      </div>
+      <a href="https://www.instagram.com/p/DT22RknEUqG/" class="insta-card" target="_blank" rel="noopener">
+        <img class="insta-card__thumb" src="https://www.instagram.com/p/DT22RknEUqG/media/?size=m" alt="Post Instagram - Projeto de topografia" loading="lazy" onerror="this.style.display='none'">
+        <div class="insta-card__body">
+          <div class="insta-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div class="insta-card__info"><span class="insta-card__handle">@fernandestopoagri</span><br><span class="insta-card__label">Ver no Instagram</span></div>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/p/DSBS-YXkbAf/" class="insta-card" target="_blank" rel="noopener">
+        <img class="insta-card__thumb" src="https://www.instagram.com/p/DSBS-YXkbAf/media/?size=m" alt="Post Instagram - Levantamento topográfico" loading="lazy" onerror="this.style.display='none'">
+        <div class="insta-card__body">
+          <div class="insta-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div class="insta-card__info"><span class="insta-card__handle">@fernandestopoagri</span><br><span class="insta-card__label">Ver no Instagram</span></div>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/p/DUirafekbAW/" class="insta-card" target="_blank" rel="noopener">
+        <img class="insta-card__thumb" src="https://www.instagram.com/p/DUirafekbAW/media/?size=m" alt="Post Instagram - Georreferenciamento" loading="lazy" onerror="this.style.display='none'">
+        <div class="insta-card__body">
+          <div class="insta-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div class="insta-card__info"><span class="insta-card__handle">@fernandestopoagri</span><br><span class="insta-card__label">Ver no Instagram</span></div>
+        </div>
+      </a>
     </div>
     <div style="text-align:center;margin-top:28px">
       <a href="https://www.instagram.com/fernandestopoagri" class="btn btn--secondary btn--large" target="_blank" rel="noopener">
@@ -1118,7 +1128,6 @@ ul{list-style:none}
 
 })();
 </script>
-<script async defer src="https://www.instagram.com/embed.js"></script>
 
 </body>
 </html>
