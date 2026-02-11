@@ -237,36 +237,20 @@ ul{list-style:none}
 }
 .segment-tag svg{width:16px;height:16px;color:var(--c-gray-500)}
 
-/* ========== INSTAGRAM CARDS ========== */
+/* ========== INSTAGRAM EMBEDS ========== */
 .insta-grid{
   display:grid;gap:20px;
   grid-template-columns:repeat(3,1fr);
 }
-.insta-card{
+.insta-grid__item{
   background:#fff;border:1px solid var(--c-gray-300);
   border-radius:var(--radius);overflow:hidden;
-  text-decoration:none;color:inherit;
-  transition:box-shadow var(--transition),transform var(--transition);
-  display:flex;flex-direction:column;
+  min-width:0;position:relative;
 }
-.insta-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
-.insta-card__thumb{
-  width:100%;aspect-ratio:1;object-fit:cover;
-  background:var(--c-gray-100);
-  display:block;
+.insta-grid__item iframe{
+  width:100%;border:0;display:block;
+  min-height:480px;
 }
-.insta-card__body{
-  padding:16px;display:flex;align-items:center;gap:10px;
-}
-.insta-card__icon{
-  width:36px;height:36px;border-radius:50%;flex-shrink:0;
-  background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-  display:flex;align-items:center;justify-content:center;
-}
-.insta-card__icon svg{width:18px;height:18px;color:#fff}
-.insta-card__info{min-width:0}
-.insta-card__handle{font-size:.85rem;font-weight:600;color:var(--c-dark)}
-.insta-card__label{font-size:.78rem;color:var(--c-gray-500)}
 
 /* ========== FAQ ========== */
 .faq-list{max-width:720px;margin:0 auto}
@@ -669,30 +653,18 @@ ul{list-style:none}
     <div class="insta-grid">
       <!--
         COMO ATUALIZAR OS POSTS:
-        1. Salve um print/thumbnail do post como assets/insta-1.jpg, insta-2.jpg, insta-3.jpg
-        2. Atualize o href com a URL do post
+        1. Copie a URL do post (ex: https://www.instagram.com/p/ABC123/)
+        2. Use a URL no formato: https://www.instagram.com/p/ABC123/embed/
       -->
-      <a href="https://www.instagram.com/p/DT22RknEUqG/" class="insta-card" target="_blank" rel="noopener">
-        <img class="insta-card__thumb" src="https://www.instagram.com/p/DT22RknEUqG/media/?size=m" alt="Post Instagram - Projeto de topografia" loading="lazy" onerror="this.style.display='none'">
-        <div class="insta-card__body">
-          <div class="insta-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-          <div class="insta-card__info"><span class="insta-card__handle">@fernandestopoagri</span><br><span class="insta-card__label">Ver no Instagram</span></div>
-        </div>
-      </a>
-      <a href="https://www.instagram.com/p/DSBS-YXkbAf/" class="insta-card" target="_blank" rel="noopener">
-        <img class="insta-card__thumb" src="https://www.instagram.com/p/DSBS-YXkbAf/media/?size=m" alt="Post Instagram - Levantamento topográfico" loading="lazy" onerror="this.style.display='none'">
-        <div class="insta-card__body">
-          <div class="insta-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-          <div class="insta-card__info"><span class="insta-card__handle">@fernandestopoagri</span><br><span class="insta-card__label">Ver no Instagram</span></div>
-        </div>
-      </a>
-      <a href="https://www.instagram.com/p/DUirafekbAW/" class="insta-card" target="_blank" rel="noopener">
-        <img class="insta-card__thumb" src="https://www.instagram.com/p/DUirafekbAW/media/?size=m" alt="Post Instagram - Georreferenciamento" loading="lazy" onerror="this.style.display='none'">
-        <div class="insta-card__body">
-          <div class="insta-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-          <div class="insta-card__info"><span class="insta-card__handle">@fernandestopoagri</span><br><span class="insta-card__label">Ver no Instagram</span></div>
-        </div>
-      </a>
+      <div class="insta-grid__item">
+        <iframe src="https://www.instagram.com/p/DT22RknEUqG/embed/" title="Post Instagram - Projeto de topografia" loading="lazy" allowtransparency="true" scrolling="no"></iframe>
+      </div>
+      <div class="insta-grid__item">
+        <iframe src="https://www.instagram.com/p/DSBS-YXkbAf/embed/" title="Post Instagram - Levantamento topográfico" loading="lazy" allowtransparency="true" scrolling="no"></iframe>
+      </div>
+      <div class="insta-grid__item">
+        <iframe src="https://www.instagram.com/p/DUirafekbAW/embed/" title="Post Instagram - Georreferenciamento" loading="lazy" allowtransparency="true" scrolling="no"></iframe>
+      </div>
     </div>
     <div style="text-align:center;margin-top:28px">
       <a href="https://www.instagram.com/fernandestopoagri" class="btn btn--secondary btn--large" target="_blank" rel="noopener">
